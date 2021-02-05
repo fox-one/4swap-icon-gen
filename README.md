@@ -2,8 +2,24 @@
 
 Generate icons and directory structure according to the [contribute guideline](https://github.com/MixinNetwork/asset-profile)
 
-
 ## Usage
+
+```
+$ ./4swap-icon-gen \
+	-config keystore.json   \
+	-a0 NEW_ASSET_ID  \
+	-a1 THE_FIRST_ASSET_ID \
+	-a2 THE_SECOND_ASSET_ID \
+	-o OUTPUT_PATH \
+	-c1 CUSTOM_COLOR_1 \
+	-c2 CUSTOM_COLOR_2 \
+	-ic1 CUSTOM_ICON_1 \
+	-ic2 CUSTOM_ICON_2
+```
+
+
+
+example:
 
 ```
 $ ./4swap-icon-gen -config keystore.json -a0 NEW_ASSET_ID -a1 54c61a72-b982-4034-a556-0d99e3c21e39 -a2 a31e847e-ca87-3162-b4d1-322bc552e831
