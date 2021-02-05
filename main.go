@@ -25,18 +25,6 @@ import (
 	"github.com/srwiley/rasterx"
 )
 
-/*
-usages
-	- default
- 	./4swap-icon-gen -config keystore.json -o NEW_ASSET_ID -a1 54c61a72-b982-4034-a556-0d99e3c21e39 -a2 a31e847e-ca87-3162-b4d1-322bc552e831
-
- 	- override icons
-	./4swap-icon-gen -config keystore.json -o NEW_ASSET_ID -a1 54c61a72-b982-4034-a556-0d99e3c21e39 -a2 a31e847e-ca87-3162-b4d1-322bc552e831 -ic1 ./btc.png -ic2 ./dot.png
-
-  - override colors
-	./4swap-icon-gen -config keystore.json -o NEW_ASSET_ID -a1 54c61a72-b982-4034-a556-0d99e3c21e39 -a2 a31e847e-ca87-3162-b4d1-322bc552e831 -c1 "#F7931B" -c2 "#000000"
-*/
-
 var (
 	config = flag.String("config", "", "keystore file path")
 	pin    = flag.String("pin", "", "pin")
