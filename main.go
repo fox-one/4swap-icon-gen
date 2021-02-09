@@ -90,7 +90,7 @@ func loadIcons(url1, url2 string) (img1, img2 image.Image, c1, c2 string, err er
 	if err != nil {
 		return
 	}
-	defer resp1.Body.Close()
+	defer resp2.Body.Close()
 
 	var imgFile1, imgFile2 io.Reader
 	if *icon1 != "" {
@@ -149,7 +149,7 @@ func genPNG(symbol string, svg []byte, img1, img2 image.Image) {
 
 	// write png
 	assetPath := getPath()
-	out, err := os.Create(path.Join(assetPath, fmt.Sprintf("%s.png", symbol)))
+	out, err := os.Create(path.Join(assetPath, "icon.png"))
 	if err != nil {
 		panic(err)
 	}
@@ -228,7 +228,10 @@ func main() {
 	}
 
 	// fetch icons
-	img1, img2, c1, c2, err := loadIcons(asset1.IconURL, asset2.IconURL)
+
+	img1, img2, c1, c2, err := loadIcons(
+		strings.ReplaceAll(asset1.IconURL, "=s128", ""),
+		strings.ReplaceAll(asset2.IconURL, "=s128", ""))
 	if err != nil {
 		log.Panicln(err)
 		return
