@@ -119,8 +119,8 @@ func loadIcons(url1, url2 string) (img1, img2 image.Image, c1, c2 string, err er
 	if err != nil {
 		return
 	}
-	img1 = resize.Resize(ICON_SIZE, ICON_SIZE, img1, resize.Lanczos3)
-	img2 = resize.Resize(ICON_SIZE, ICON_SIZE, img2, resize.Lanczos3)
+	img1 = resize.Resize(ICON_SIZE, ICON_SIZE, img1, resize.Bilinear)
+	img2 = resize.Resize(ICON_SIZE, ICON_SIZE, img2, resize.Bilinear)
 
 	colors1 := color_extractor.ExtractColors(img1)
 	colors2 := color_extractor.ExtractColors(img2)
