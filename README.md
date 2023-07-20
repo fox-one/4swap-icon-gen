@@ -2,7 +2,24 @@
 
 Generate icons and directory structure according to the [contribute guideline](https://github.com/MixinNetwork/asset-profile)
 
+
 ## Usage
+
+
+```
+$ git clone git@github.com:fox-one/4swap-icon-gen.git
+```
+
+```
+$ cd 4swap-icon-gen
+```
+
+```
+$ go build
+```
+
+Create keystore.json from [Mixin Developer Dashboard](https://developers.mixin.one/dashboard)
+
 
 ```
 $ ./4swap-icon-gen \
@@ -16,8 +33,6 @@ $ ./4swap-icon-gen \
 	-ic1 CUSTOM_ICON_1 \
 	-ic2 CUSTOM_ICON_2
 ```
-
-
 
 example:
 
